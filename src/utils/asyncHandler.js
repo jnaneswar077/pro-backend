@@ -10,18 +10,20 @@
 // correct one given by chatgpt
 const asyncHandler = (fn) => (req, res, next) => {
     Promise.resolve(fn(req, res, next))
-    .catch(next); // same as .catch(err => next(err))
+    .catch(next); 
 };
 
 
 
 
-export default asyncHandler;
+// export default asyncHandler;
+export {asyncHandler}
 
 
 // const asyncHandler = () => {}
 
 // // let me explain this to you carefully  (little bit undestood)
+// 25 != 26 according to chatgpt
 // const asyncHandler = (func) => {()=>{}}
 // const asyncHandler = (fn) => () => {}
 
