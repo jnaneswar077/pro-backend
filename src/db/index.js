@@ -8,6 +8,7 @@ const connectDB = async () => {
     console.log("✅ Connected to DB successfully :", connectionInstance.connection.host);
   } catch (err) {
     console.error("❌ Error in connecting to DB :", err);
+    throw err; //this is important because this will not allow the server to run if the db is not connected
   }
 };
 
